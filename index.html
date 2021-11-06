@@ -3,155 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <title>Üye Ol</title>
-
     <link rel="stylesheet" href="uye.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
 </head>
 <body>
 <div class="uyeformu">
-    <form action="admin.html" method="post">
-        <h3>Kullanıcı Kayıt Formu</h3>
+    <div class="header"> <h3>Kullanıcı Kayıt Formu</h3> </div>
 
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Adınız</label><br>
-            </div>
-            <div class="col75">
-                <input class="input" type="text" name="adiniz"  placeholder="kullanıcı adı" required maxlength="40"/><br><br>
-            </div>
-        </div>
+    <form  id="form" class="form" method="post" >
 
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Soyadınız</label><br>
-            </div>
-            <div class="col75">
-                <input class="input" type="text" name="soyadiniz" placeholder="kullanıcı soyadı" required maxlength="40" /><br><br>
-            </div>
+
+<!--inputlardaki name ile alınan değerlere erişilir.-->
+
+        <div class="form-control">
+                <label for="ad" class="form_icerik">Adınız</label>
+                <input class="input" type="text" name="ad" id="ad" placeholder="kullanıcı adı"  maxlength="40"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+
         </div>
 
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Cinsiyetiniz</label><br>
-            </div>
-            <div class="col75">
-                KADIN<input type="radio" name="cinsiyet"  value="kadın">
-                ERKEK<input type="radio" name="cinsiyet" value="erkek"><br><br>
-            </div>
+
+        <div class="form-control">
+                <label for="soyad" class="form_icerik">Soyadınız</label>
+                <input class="input" type="text" name="soyad" id="soyad" placeholder="kullanıcı soyadı" maxlength="40" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
 
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">TC Kimlik No</label><br>
-            </div>
-            <div class="col75">
-                <input class="input" type="text" name="tcniz"  placeholder="kullanıcı TC" required maxlength="11" minlength="11" /><br><br>
-            </div>
+        <div class="form-control">
+                <label  class="form_icerik">Cinsiyetiniz</label>
+
+                KADIN<input type="radio" name="cinsiyet"  value="kadın"/>
+                ERKEK<input type="radio" name="cinsiyet" value="erkek"/>
+
         </div>
 
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">E-Mail</label><br>
-            </div>
-            <div class="col75">
-                <input class="input" type="email" name="tcniz"  placeholder="e-posta giriniz" required /><br><br>
-            </div>
+        <div class="form-control">
+                <label for="tc" class="form_icerik">TC Kimlik No</label>
+                <input class="input" type="text" name="tc" id="tc"  placeholder="kullanıcı TC" required maxlength="11" minlength="11" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+
         </div>
 
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Yaş</label><br>
-            </div>
-            <div class="col75">
-                <input class="input" type="number" name="yas"  required min="18" max="100"/><br><br>
-            </div>
+        <div class="form-control">
+                <label for="email" class="form_icerik">E-Mail</label>
+                <input class="input" type="email" name="email" id="email" placeholder="e-posta giriniz" required />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Doğum Tarihi</label><br>
-            </div>
-            <div class="col75">
-                <input class="input" type="date" name="tarih" /><br><br>
-            </div>
+
+        <div class="form-control">
+                <label for="yas" class="form_icerik">Yaş</label>
+                <input class="input" type="number" name="yas" id="yas" required min="18" max="100"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Doğum Yeri</label><br>
-            </div>
-            <div class="col75">
-                <select class="input" name="yer">
+
+        <div class="form-control">
+                <label for="dgmtarih" class="form_icerik">Doğum Tarihi</label>
+                <input class="input" type="date" id="dgmtarih" name="dgmtarih" />
+                <i class="fas fa-check-circle"></i>
+               <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+        </div>
+
+        <div class="form-control">
+                <label for="dgmyer" class="form_icerik">Doğum Yeri</label>
+                <select class="input" name="dgmyer" id="dgmyer">
                     <option value="trabzon">Trabzon</option>
                     <option value="istanbul">İstanbul</option>
                     <option value="ankara">Ankara</option>
                     <option value="malatya">Malatya</option>
                     <option value="bursa">Bursa</option>
-                </select><br><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Dosya Ekle</label><br>
-            </div>
-            <div class="col75">
-                <input class="input" type="file" name="file"  required/><br><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Öz Geçmiş</label><br>
-            </div>
-            <div class="col75">
-                <textarea name="mesaj" class="form_icerik" placeholder="Öz geçmişinizi yazınız"></textarea><br><br>
-            </div>
+                </select>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
 
-        <div class="row">
-            <div class="col25">
+        <div class="form-control">
+                <label for="file" class="form_icerik">Dosya Ekle</label>
+                <input class="input" type="file" name="file" id="file" required/>
+        </div>
+
+        <div class="form-control">
+                <label for="mesaj" class="form_icerik">Öz Geçmiş</label><br>
+                <textarea  name="mesaj" class="form_icerik" id="mesaj" placeholder="Öz geçmişinizi yazınız"></textarea>
+            </div>
+
+        <div class="form-control">
                 <label class="form_icerik">Bildiğiniz Diller</label><br>
-            </div>
-            <div class="col75">
-                <label for="ing">İngilizce</label><input type="checkbox" id="ing" value="ing"><br>
-                <label for="alm">Almanca</label><input type="checkbox" id="alm" value="alm"><br>
-                <label for="alm">İtalyanca</label><input type="checkbox" id="itl" value="alm"><br>
-                <label for="fra">Fransızca</label><input type="checkbox" id="fra" value="fra"><br><br>
 
-            </div>
+                <label for="ing">İngilizce</label><input type="checkbox" id="ing" value="ing"/>
+                <label for="alm">Almanca</label><input type="checkbox" id="alm" value="alm"/>
+                <label for="alm">İtalyanca</label><input type="checkbox" id="itl" value="alm"/>
+                <label for="fra">Fransızca</label><input type="checkbox" id="fra" value="fra"/>
         </div>
 
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Sevdiğiniz Renk</label><br>
-            </div>
-            <div class="col75">
-                <input type="color" name="renk" /><br><br>
-            </div>
+        <div class="form-control">
+                <label for="renk"  class="form_icerik">Sevdiğiniz Renk</label>
+                <input type="color" name="renk" id="renk"/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
 
 
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Şifre</label><br>
-            </div>
-            <div class="col75">
-                <input class="input" type="password" name="sifre" placeholder="şifrenizi giriniz" required/><br><br>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col25">
-                <label class="form_icerik">Şifre Tekerarı</label><br>
-            </div>
-            <div class="col75">
-                <input class="input" type="password" name="sifre_tekrarı" placeholder="şifrenizi tekrar giriniz"  required/><br><br>
-            </div>
+        <div class="form-control">
+                <label for="sifre" class="form_icerik">Şifre</label>
+                <input class="input" type="password" name="sifre" id="sifre" placeholder="şifrenizi giriniz" required/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
         </div>
 
-        <div class="row_button">
+        <div class="form-control">
+                <label for="sifretekrari" class="form_icerik" >Şifre Tekrarı</label>
+                <input class="input" type="password" name="sifre_tekrarı" id="sifretekrari" placeholder="şifrenizi tekrar giriniz"  required/>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+        </div>
+
             <input type="submit" class="button"  value="GÖNDER">
             <input type="reset" class="button" name="sil" id="sil" value="TEMİZLE">
-        </div>
+
 
     </form>
 
 
 </div>
+<script src="uye_validation.js"></script>
 </body>
 </html>
