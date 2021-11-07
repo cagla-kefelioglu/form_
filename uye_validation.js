@@ -89,7 +89,7 @@ const setErrorFor = (input,message) =>{
 const setSuccesFor = (input) =>{
     const formControl = input.parentElement;
 
-    formControl.className='form-contol succes';
+    formControl.className='form-control succes';
 
 }
 
