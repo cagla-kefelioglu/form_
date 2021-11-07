@@ -1,4 +1,4 @@
-const form=document.getElementById('form_');
+const form=document.getElementById('form');
 const ad=document.getElementById('ad');
 const soyad=document.getElementById('soyad');
 const tc=document.getElementById('tc');
